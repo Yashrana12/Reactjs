@@ -1,0 +1,27 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex: 1;
+    text-align: center;
+    border: 2px solid black;
+    
+}
+.body .body1{
+    flex: 0.3;
+    background-color: rgb(70, 70, 216);
+    display: grid;
+    align-items: center;
+    height: 400px;
+    border: 2px solid white;
+
+}
+.body .body2{
+    flex: 1;
+    background-color: rgb(1, 1, 36);
+    display: grid;
+    align-items: center;
+    height: 400px;
+    border: 2px solid white;
+}

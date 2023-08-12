@@ -1,0 +1,9 @@
+.Head{
+    width: 100vw;
+    height: 40px;
+    background-color: red;
+    border: 2px solid black;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}

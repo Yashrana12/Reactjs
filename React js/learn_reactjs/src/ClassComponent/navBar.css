@@ -1,0 +1,9 @@
+.Nav{
+    height: 40px;
+    width: 100vw;
+    background-color: green;
+    border: 2px solid black;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
