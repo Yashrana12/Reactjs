@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Col, Form, Row, Table } from "react-bootstrap";
-import { AiOutlineDelete } from "react-icons/ai";
-import "./TestMultiInput.css";
+// import { AiOutlineDelete } from "react-icons";
+// import "./TestMultiInput.css";
 
 export default function MultiInputForm() {
   let [formData, setFormData] = useState({
@@ -261,9 +261,10 @@ export default function MultiInputForm() {
                         <td>{e.state}</td>
                         <td>{e.zip}</td>
                         <td>
-                          <Button variant="info">
-                            <AiOutlineDelete onClick={() => deleteHandler(i)} />
-                          </Button>
+                          <Button
+                            variant="info"
+                            onClick={() => deleteHandler(i)}
+                          ></Button>
                           <Button
                             onClick={() => updateFun(i, e)}
                             variant="info"

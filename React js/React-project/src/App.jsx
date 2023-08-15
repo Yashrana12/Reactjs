@@ -1,11 +1,13 @@
-import React from "react"
+import React from "react";
 import "./App.css";
-import MultiInputForm from "./MultiInputForm";
+import Homecom from "./Home/HomeCom";
+// import MultiInputForm from "./MultiInputForm";
 
 function App() {
   return (
     <>
-      <MultiInputForm />
+      {/* <MultiInputForm /> */}
+      <Homecom />
     </>
   );
 }
