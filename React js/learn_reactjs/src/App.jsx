@@ -4,6 +4,8 @@ import TestMultiInput from "./input/TestMultiInput";
 import MultiInputForm from "./input/MultiInputForm";
 import RadioButtons from "./input/RadioButtons";
 import CheckBox from "./input/CheckBox";
+import ListView from "./Module 9/list_view";
+import IncrementDecrement from "./Module 9/increment&decrement";
 // import Fragment from "./ConditionalRander-Map-Fragmet/Fragment";
 // import ConditionalProject from "./task/ConditionalProject";
 // import MapKeyPro from "./task/MapKeyPro";
@@ -75,9 +77,13 @@ function App() {
       {/* <TestUpdate /> */}
       {/* <MultipleInput /> */}
       {/* <TestMultiInput /> */}
-      <MultiInputForm />
+      {/* <MultiInputForm /> */}
       {/* <RadioButtons /> */}
       {/* <CheckBox /> */}
+
+      {/* ----------------------assignment -----------------*/}
+      {/* <ListView /> */}
+      <IncrementDecrement />
     </div>
   );
 }

@@ -1,0 +1,113 @@
+Q.1 What is React Js?
+A.1 React is a JavaScript library for building user interfaces.  React is a popular JavaScript library used for web development. React.js or ReactJS or React are different ways to represent ReactJS. Today’s many large-scale companies (Netflix, Instagram, to name a few) also use React JS. There are many advantages of using this framework over other frameworks, and It’s ranking under the top 10 programming languages for the last few years under various language ranking indices.
+
+Q.2 What is NPM in React Js?
+A.2 npm is an abbreviation used for the node package manager. It is a package manager for JavaScript. It is the default package manager that comes with NodeJS when you install it.
+
+Q.3 What is Role of Node Js in react Js?
+A.3 
+Node.js:
+Node.js is a runtime environment that allows you to execute JavaScript code on the server-side. It uses an event-driven, non-blocking I/O model that makes it well-suited for building scalable and real-time applications. Some of the roles of Node.js in a React.js application include:
+=> Server-side Rendering (SSR)
+=> API Backend
+=> Build Tools
+=> Middleware
+=> Real-Time applications
+
+React.js:
+React.js is a JavaScript library for building user interfaces. It primarily focuses on the frontend part of web development. Some of the roles of React.js in a web application include:
+=> UI Commponents
+=> Virtual development
+=> Componenet LifeCycle
+=> State Managements
+=> Routing
+=> User Interaction
+
+Q.4 What is CLI command In React Js?
+A.4 In React.js, the term "CLI command" typically refers to commands you run using the Command Line Interface (CLI) to interact with and manage your React projects. The most commonly used CLI tool for React development is the one provided by Create React App (CRA), a popular toolchain for building React applications with minimal configuration.
+
+Here are some of the most important CLI commands you might use in React.js development using Create React App:
+ 
+    => Creating a New React App (npx create-react-app my-app)
+    => Starting the Development Serve (npm start)
+    => Building for Production (npm build)
+    => Running Tests (npm test)
+    => Creating a New Component
+    => Ejecting from Create React App (npm run eject)
+
+
+Q.5 What is Components in React Js?
+A.5 Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components
+
+
+Q.6 What is Header and Content Components in React Js?
+A.6 In the context of React.js, "Header" and "Content" components are common terms used to describe different parts of a user interface. These terms are not specific to React itself, but rather reflect a common pattern of structuring user interfaces in various web 
+
+(1)  Header Component:
+The "Header" component in a React application usually represents the top section of a user interface. It often contains elements that provide navigation, branding, user authentication status, and other high-level information. A header might include elements such as a logo, navigation links, user profile information, search bars, and possibly a menu button for mobile responsiveness.
+
+(2)  Content Component:
+The "Content" component generally represents the main portion of a user interface where the primary content is displayed. This is where you'll typically find the core features, data, and interactions of your application. The content component might include different sections, such as lists, cards, forms, images, text, and other elements that provide value to the user.
+ 
+
+Q.7 How to install React Js on Windows, Linux Operating System? How to Install NPM and How to check version of NPM?
+A.7 Installing React.js and NPM (Node Package Manager) on both Windows and Linux operating systems is quite similar, as both platforms support Node.js, which is a prerequisite for React development. Here are the steps to install React.js and NPM on both systems, along with how to check the NPM version:
+
+=> Installing React.js and NPM:
+
+(1)Windows:
+
+* Download the Node.js installer for Windows from the official website: https://nodejs.org/
+* Run the installer and follow the installation prompts.
+* Open the Command Prompt (CMD) or Windows PowerShell.
+
+(2)Linux:
+
+* You can use your system's package manager to install Node.js. For example, on Ubuntu, you can run:
+(sql)
+(sudo apt-get update)
+(sudo apt-get install nodejs npm)
+
+* Alternatively, you can use Node Version Manager (NVM) to manage Node.js versions. 
+
+=> Checking NPM Version:
+
+-> After installing Node.js, NPM is also installed by default. You can check the NPM version using the following command in the terminal:
+
+
+(npm -v)
+
+This command will display the installed version of NPM.
+
+=> Creating a React App:
+
+Once you have Node.js and NPM installed, you can create a new React application using the Create React App (CRA) tool. Here's how:
+
+1. Open the terminal (CMD or PowerShell on Windows, terminal on Linux).
+
+2. Run the following command to create a new React app (replace my-app with your desired app name):
+(lua)
+(npx create-react-app my-app)
+
+3. Navigate to the app directory:
+(bash)
+(cd my-app)
+
+4. Start the development server:
+(sql)
+(npm start)
+
+This will start the development server and open your React app in a web browser.
+
+Remember that these are general steps and may vary slightly depending on your specific system configuration. Always refer to the official documentation or resources for the most up-to-date and accurate instructions.
+
+
+Q.8 How to check version of React Js?
+A.8  we are going to discuss three ways to find out the React version.
+        -> Using package.json file
+        -> Using command line
+        -> Using the version property of default import from React
+
+
+Q.9 How to change in components of React Js?
+A.9 React components automatically re-render whenever there is a change in their    state or props. A simple update of the state, from anywhere in the code, causes all the User Interface (UI) elements to be re-rendered automatically. However, there may be cases where the render() method depends on some other data

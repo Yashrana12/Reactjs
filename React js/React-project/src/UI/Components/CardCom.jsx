@@ -7,17 +7,17 @@ import { Heart, ShoppingBag } from "lucide-react";
 
 export default function CardCom({ productData }) {
   return (
-    <div>
+    <div className="Card">
       <Card
         style={{
           width: "18rem",
-          height: "35rem",
+          height: "28rem",
           justifyContent: "center",
           textAlign: "center",
           backgroundColor: "silver",
         }}
       >
-        <img alt="Sample" src={productData.img} className="" />
+        <img alt="Sample" src={productData.img} className="proimg" />
         <CardBody>
           <CardTitle tag="h5">{productData?.model}</CardTitle>
           <CardSubtitle className="mb-2 text-muted" tag="h6">

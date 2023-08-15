@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { Layout, theme } from "antd";
 const { Content } = Layout;
 import WatchData from "../Utils/WatchData.json";
+import "../Home/Homecom.css";
 
 import HeaderCom from "../UI/Components/HeaderCom";
 import FooterCom from "../UI/Components/FooterCom";
 import CardCom from "../UI/Components/CardCom";
+import HomePage from "../UI/Components/HomePage";
 
 const Homecom = () => {
   let [productData, setProductData] = useState(WatchData);
@@ -28,10 +30,12 @@ const Homecom = () => {
   return (
     <Layout className="layout bg-body-secondary">
       <HeaderCom setSearchText={setSearchText} />
+      <HomePage />
       <Content
-        className=""
+        className="home"
         style={{
-          padding: "0 50px",
+          padding: "50px 50px",
+          margin: "auto",
         }}
       >
         <div

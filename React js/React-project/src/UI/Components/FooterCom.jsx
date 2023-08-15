@@ -5,7 +5,7 @@ import { Footer } from "antd/es/layout/layout";
 export default function FooterCom() {
   return (
     <>
-      <div>
+      <div className="footercom">
         <Footer
           style={{
             textAlign: "center",

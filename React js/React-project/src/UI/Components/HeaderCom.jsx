@@ -19,11 +19,11 @@ export default function HeaderCom({ setSearchText }) {
   return (
     <>
       <div>
-        <div>
+        <div className="headercom">
           <Navbar expand={"lg"}>
             <NavbarBrand href="/">
               <Watch style={{ color: "" }} />
-              Watches
+              Rolex
             </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
