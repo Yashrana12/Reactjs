@@ -4,17 +4,25 @@
     box-sizing: border-box;
     font-family: fantasy;
 }
+.headerCom{
+    position: fixed;
+    z-index: 1;
+    color: goldenrod;
+}
+.headerCom  .logo{
+    background-color: transparent;
+}
 .home {
     background: linear-gradient(90deg, #0b3e27, #197149);
    
 }
-.homepag{
-    background-image: url(https://cdn.dribbble.com/users/1134734/screenshots/14109707/media/348107c80fb9a6d11d093d444608c21b.jpg);
+.Carousel-com .item{
     height: auto;
-    width: 100%;
+    width: 100%;   
 }
 
 .card img{
     height: 300px;
     width: auto;
+    
 }

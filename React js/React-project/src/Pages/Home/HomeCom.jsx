@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Layout, theme } from "antd";
 const { Content } = Layout;
-import WatchData from "../Utils/WatchData.json";
-import "../Home/Homecom.css";
+import WatchData from "../../Utils/WatchData.json";
+import "../../Pages/Home/HomeCom.css";
 
-import HeaderCom from "../UI/Components/HeaderCom";
-import FooterCom from "../UI/Components/FooterCom";
-import CardCom from "../UI/Components/CardCom";
-import HomePage from "../UI/Components/HomePage";
+import HeaderCom from "../../UI/Components/HeaderCom";
+import FooterCom from "../../UI/Components/FooterCom";
+import CardCom from "../../UI/Components/CardCom";
+// import HomePage from "../UI/Components/HomePage";
+import ControlledCarousel from "../../UI/Components/HomePage";
 
 const Homecom = () => {
   let [productData, setProductData] = useState(WatchData);
@@ -28,22 +29,17 @@ const Homecom = () => {
   } = theme.useToken();
   console.log("productData", productData);
   return (
-    <Layout className="layout bg-body-secondary">
+    <Layout className="layout bg-body-secondary home">
       <HeaderCom setSearchText={setSearchText} />
-      <HomePage />
-      <Content
-        className="home"
-        style={{
-          padding: "50px 50px",
-          margin: "auto",
-        }}
-      >
+      <ControlledCarousel />
+      <Content>
         <div
           className=" d-flex  flex-wrap"
           style={{
-            gap: "10px",
+            gap: "25px",
             background: colorBgContainer,
             padding: "10px",
+            borderRadius: "20px",
           }}
         >
           {productData?.map?.((e) => {

@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Homecom from "./Home/HomeCom";
+import Homecom from "./Pages/Home/HomeCom";
+import Womans from "./Pages/Woman/Womans";
 // import MultiInputForm from "./MultiInputForm";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       {/* <MultiInputForm /> */}
       <Homecom />
+      {/* <Womans /> */}
     </>
   );
 }

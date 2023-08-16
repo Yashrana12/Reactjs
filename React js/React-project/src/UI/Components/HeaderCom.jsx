@@ -1,5 +1,5 @@
 // import { Layout, Menu, theme } from "antd";
-import { Search, ShoppingCart, Watch } from "lucide-react";
+import { Search, ShoppingCart } from "lucide-react";
 import PropTypes from "prop-types";
 
 import { useState } from "react";
@@ -20,14 +20,21 @@ export default function HeaderCom({ setSearchText }) {
     <>
       <div>
         <div className="headercom">
-          <Navbar expand={"lg"}>
-            <NavbarBrand href="/">
-              <Watch style={{ color: "" }} />
-              Rolex
+          <Navbar expand={"lg"} color="white">
+            <NavbarBrand href="/" style={{ flex: "0.2" }}>
+              <img
+                src="https://logowik.com/content/uploads/images/275_rolex.jpg"
+                alt="logo"
+                width={100}
+                height={100}
+                style={{ padding: "10px 0px" }}
+                className="logo flex=1"
+              />
             </NavbarBrand>
+
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
-              <Nav className="me-auto" navbar>
+              <Nav className="me-auto pt-3 " navbar style={{ flex: "0.5" }}>
                 <NavItem>
                   <NavLink href="">Man</NavLink>
                 </NavItem>
@@ -36,6 +43,9 @@ export default function HeaderCom({ setSearchText }) {
                 </NavItem>
                 <NavItem>
                   <NavLink href="">Exclusive</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink href="">Best Saller</NavLink>
                 </NavItem>
               </Nav>
               <ShoppingCart color="#363535" />

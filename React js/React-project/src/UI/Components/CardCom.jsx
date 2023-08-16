@@ -12,22 +12,27 @@ export default function CardCom({ productData }) {
         style={{
           width: "18rem",
           height: "28rem",
-          justifyContent: "center",
+          // justifyContent: "center",
           textAlign: "center",
-          backgroundColor: "silver",
+          backgroundColor: "#197149",
+          borderRadius: "10px",
+          border: "1px solid gold",
+          overflow: "hidden",
         }}
       >
         <img alt="Sample" src={productData.img} className="proimg" />
         <CardBody>
-          <CardTitle tag="h5">{productData?.model}</CardTitle>
-          <CardSubtitle className="mb-2 text-muted" tag="h6">
+          <CardTitle tag="h6" style={{ color: "goldenrod" }}>
+            {productData?.model}
+          </CardTitle>
+          <CardSubtitle className="mb-2" tag="h6" style={{ color: "white" }}>
             {productData?.Price}
           </CardSubtitle>
-          <Button color="danger" outline className="m-1 ms-4 ">
+          <Button color="warning" outline className="m-2 ms-4 ">
             Buy <ShoppingBag />
           </Button>
 
-          <Button color="danger" outline className="m-1 me-4">
+          <Button color="warning" outline className="m-2 me-4">
             <Heart />
           </Button>
         </CardBody>
