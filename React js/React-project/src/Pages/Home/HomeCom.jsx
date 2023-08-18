@@ -24,12 +24,12 @@ const Homecom = () => {
     setProductData(filterData);
   }, [searchText]);
 
-  const {
-    token: { colorBgContainer },
-  } = theme.useToken();
+  // const {
+  //   token: { colorBgContainer },
+  // } = theme.useToken();
   console.log("productData", productData);
   return (
-    <Layout className="layout bg-body-secondary home">
+    <Layout className="home  ">
       <HeaderCom setSearchText={setSearchText} />
       <ControlledCarousel />
       <Content>
@@ -37,7 +37,7 @@ const Homecom = () => {
           className=" d-flex  flex-wrap"
           style={{
             gap: "25px",
-            background: colorBgContainer,
+            // background: colorBgContainer,
             padding: "10px",
             borderRadius: "20px",
           }}

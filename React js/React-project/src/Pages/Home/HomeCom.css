@@ -4,16 +4,17 @@
     box-sizing: border-box;
     font-family: fantasy;
 }
-.headerCom{
-    position: fixed;
-    z-index: 1;
-    color: goldenrod;
+.headercom .Navbar{
+   color: black;
 }
 .headerCom  .logo{
-    background-color: transparent;
+    /* background-color: transparent; */
+    padding: 0;
 }
 .home {
-    background: linear-gradient(90deg, #0b3e27, #197149);
+    /* background: linear-gradient(90deg, #0b3e27, #197149); */
+    padding: 0px 50px;
+    margin: auto;
    
 }
 .Carousel-com .item{
@@ -24,5 +25,5 @@
 .card img{
     height: 300px;
     width: auto;
-    
+   /* margin: auto; */
 }

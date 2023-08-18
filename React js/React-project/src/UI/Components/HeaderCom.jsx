@@ -1,6 +1,7 @@
 // import { Layout, Menu, theme } from "antd";
 import { Search, ShoppingCart } from "lucide-react";
 import PropTypes from "prop-types";
+import "../../Pages/Home/HomeCom.css";
 
 import { useState } from "react";
 import {
@@ -18,8 +19,8 @@ export default function HeaderCom({ setSearchText }) {
   const toggle = () => setIsOpen(!isOpen);
   return (
     <>
-      <div>
-        <div className="headercom">
+      <div className="headercom">
+        <div>
           <Navbar expand={"lg"} color="white">
             <NavbarBrand href="/" style={{ flex: "0.2" }}>
               <img
@@ -28,7 +29,7 @@ export default function HeaderCom({ setSearchText }) {
                 width={100}
                 height={100}
                 style={{ padding: "10px 0px" }}
-                className="logo flex=1"
+                className="logo flex=1 color-white"
               />
             </NavbarBrand>
 

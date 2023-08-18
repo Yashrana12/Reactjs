@@ -6,12 +6,10 @@ import CardCom from "../../UI/Components/CardCom";
 // import propTypes from "prop-types";
 import "../../Pages/Home/HomeCom.css";
 
-export default function Womans() {
+export default function Man() {
   const [Data, setData] = useState([]);
   useEffect(() => {
-    let filterData = watchData?.toLowerCase?.filter?.(
-      (e) => e?.toLowerCase?.categories === "Woman"
-    );
+    let filterData = watchData?.filter?.((e) => e.categories === "Mans");
     setData(filterData);
   }, []);
   return (
@@ -27,7 +25,7 @@ export default function Womans() {
         }}
       >
         {Data?.map?.((e) => {
-          return <CardCom key={e.categories} productData={e} />;
+          return <CardCom key={e.img} productData={e} />;
         })}
       </div>
       <FooterCom />

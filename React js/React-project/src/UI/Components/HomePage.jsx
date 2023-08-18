@@ -13,7 +13,7 @@ function ControlledCarousel() {
     <Carousel
       activeIndex={index}
       onSelect={handleSelect}
-      className="Carousel-com"
+      className="Carousel-com pb-5 "
     >
       <Carousel.Item className="item">
         <img

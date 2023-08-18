@@ -7,7 +7,7 @@ import { Heart, ShoppingBag } from "lucide-react";
 
 export default function CardCom({ productData }) {
   return (
-    <div className="Card">
+    <div className="Card pr-4">
       <Card
         style={{
           width: "18rem",
