@@ -1,0 +1,167 @@
+.font{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.style1 .img1{
+    background-image: url(../../images/1.jpg);
+    background-position:  center;
+    background-size: cover;
+    width: 75%;
+    text-align: center;
+    filter: drop-shadow(5px 5px 5px rgb(9, 59, 9));
+    height: 650px;
+}
+.style1.img2{
+    background-image: url(../../images/1.webp);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    position: absolute;
+    top: 130px;
+    left: 0px;
+    filter: drop-shadow(-1px -1px 5px rgb(9, 59, 9) );
+}
+.style1 .rel{
+    position: relative;
+}
+.button{
+    --bg :#0000;
+    --hover-bg:#E58326;
+    --hover-text:"#0000";
+    color: white;
+    border: 1px solid var(--bg);
+    border-radius: 5px;
+    padding: 0.8em 2em;
+    transition: 0.4s;
+}
+.button:hover{
+    color: var(--hover-text);
+    transform: translate(-0.25rem ,-0.5rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+}
+.buttn:active{
+    transform: translate(0);
+    box-shadow: none;
+}
+
+
+@media (max-width:576px) {
+    .style1 {
+      margin-top: 200px;
+      margin-bottom: 100px;
+    }
+  
+    .style1 .img2 {
+      top: -100px;
+      left: 20px;
+      width: 150px;
+      height: 250px;
+    }
+  
+    .style1 .img1 {
+      justify-content: center;
+      width: 300px;
+      height: 500px;
+    }
+  
+    .frag {
+      gap: 30px;
+      padding-bottom: 40px;
+    }
+  
+    .fontt {
+      padding: 0px 20px;
+      text-align: center;
+    }
+  }
+  
+  @media (min-width:576px) {
+  
+    .style1 .rightpara {
+      padding-left: 0;
+      padding: 20px;
+    }
+  
+    .style1 {
+      margin-top: 150px;
+      margin-bottom: 100px;
+    }
+  
+    .style1 .img1 {
+      justify-content: center;
+      width: 400px;
+    }
+  
+    .frag {
+      gap: 30px;
+    }
+  
+    .fontt {
+      text-align: center;
+    }
+  
+    .button {
+      margin: auto;
+    }
+  }
+  
+  @media (min-width:768px) {
+    .frag {
+      flex-direction: column;
+    }
+  
+    .style1 .img2 {
+      height: 400px;
+      width: 250px;
+      position: absolute;
+      top: 130px;
+      left: -60px;
+    }
+  
+    .style1 .img1 {
+      justify-content: right;
+      width: 500px;
+    }
+  
+  }
+  
+  @media (min-width:992px) {
+  
+    .style1 {
+      margin-bottom: 0px;
+    }
+  
+    .style1 .rightpara {
+      padding: 0px 0px 0px 80px;
+    }
+  
+    .frag {
+      flex-direction: row;
+      gap: 0;
+    }
+  
+    .style1 .img2 {
+      height: 400px;
+      width: 250px;
+      position: absolute;
+      top: 130px;
+      left: -50px;
+    }
+  
+    .fontt {
+      text-align: right !important;
+    }
+  
+    .button {
+      margin: inherit;
+    }
+  }
+  
+  @media (min-width:1400px) {
+  
+    .style1 .img2 {
+      left: 60px;
+    }
+  }

@@ -1,0 +1,152 @@
+.font{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.style2 .img1{
+    background-image: url(../../images/1.jpg);
+    background-position:  center;
+    background-size: cover;
+    width: 75%;
+    filter: drop-shadow(-5px -5px 5px rgb(9, 59, 9));
+    height: 650px;
+}
+.style2.img2{
+    background-image: url(../../images/1.webp);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    position: absolute;
+    top: 130px;
+    left: 0px;
+    filter: drop-shadow(1px 1px 5px rgb(9, 59, 9) );
+}
+.style2 .rel{
+    position: relative;
+}
+.button{
+    --bg :#0000;
+    --hover-bg:#E58326;
+    --hover-text:"#0000";
+    color: white;
+    border: 1px solid var(--bg);
+    border-radius: 5px;
+    padding: 0.8em 2em;
+    transition: 0.4s;
+}
+.button:hover{
+    color: var(--hover-text);
+    transform: translate(-0.25rem ,-0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+}
+.buttn:active{
+    transform: translate(0);
+    box-shadow: none;
+}
+
+
+@media (max-width:576px) {
+    .style2 .img2 {
+      top: 345px;
+      right: 14px;
+      width: 150px;
+      height: 250px;
+    }
+  
+    .style2 .img1 {
+      justify-content: center;
+      width: 300px;
+      height: 500px;
+    }
+  
+    .frag {
+      gap: 30px;
+      padding-bottom: 40px;
+    }
+  
+    .font {
+      padding: 0px 20px;
+      text-align: center;
+    }
+  }
+  
+  @media (min-width:576px) {
+  
+    .style2 .rightpara {
+      padding-right: 0;
+      padding: 20px;
+    }
+  
+    .style2 .img1 {
+      justify-content: center;
+      width: 400px;
+    }
+  
+    .frag {
+      gap: 30px;
+    }
+  
+    .font {
+      text-align: center !important;
+    }
+  
+    .button {
+      margin: auto;
+    }
+  }
+  
+  @media (min-width:768px) {
+    .frag {
+      flex-direction: column;
+    }
+  
+    .style2 .img2 {
+      height: 400px;
+      width: 250px;
+      position: absolute;
+      top: 130px;
+      right: -84px;
+    }
+  
+    .style2 .img1 {
+      justify-content: right;
+      width: 500px;
+    }
+  
+  }
+  
+  @media (min-width:992px) {
+  
+    .style2 .rightpara {
+      padding: 0px 80px 0px 0px;
+    }
+  
+    .frag {
+      flex-direction: row;
+      gap: 0;
+    }
+  
+    .style2 .img2 {
+      height: 400px;
+      width: 250px;
+      position: absolute;
+      top: 130px;
+      right: -60px;
+    }
+  
+    .font {
+      text-align: left !important;
+    }
+  
+    .button {
+      margin: inherit;
+    }
+  }
+  
+  @media (min-width:1400px) {
+  
+    .style2 .img2 {
+      right: 60px;
+    }
+  }

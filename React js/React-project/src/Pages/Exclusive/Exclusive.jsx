@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
-import HeaderCom from "../../UI/Components/HeaderCom";
-import FooterCom from "../../UI/Components/FooterCom";
+import HeaderCom from "../../UI/Components/HeaderCom/HeaderCom";
+import FooterCom from "../../UI/Components/FooterCom/FooterCom";
 import watchData from "../../Utils/WatchData.json";
-import CardCom from "../../UI/Components/CardCom";
+import CardCom from "../../UI/Components/CardCom/CardCom";
 // import propTypes from "prop-types";
-import "../../Pages/Home/HomeCom.css";
 
-export default function Exclusive() {
-  const [Data, setData] = useState([]);
+export default function Exclusive({ searchText }) {
+  const [productData, SetProductData] = useState([]);
   useEffect(() => {
-    let filterData = watchData?.filter?.((e) => e.categories === "Exclusive");
-    setData(filterData);
-  }, []);
+    let filterData = watchData?.filter?.((e) => {
+      return (
+        e.categories === "Exclusive" &&
+        e?.model?.toLowerCase?.()?.includes?.(searchText?.toLowerCase?.())
+      );
+    });
+    SetProductData(filterData);
+  }, [searchText]);
   return (
     <>
       <HeaderCom />
@@ -24,14 +28,14 @@ export default function Exclusive() {
           borderRadius: "20px",
         }}
       >
-        {Data?.map?.((e) => {
-          return <CardCom key={e.img} productData={e} />;
+        {productData?.map?.((e) => {
+          return <CardCom key={e.model} productData={e} />;
         })}
       </div>
       <FooterCom />
     </>
   );
 }
-// Womans.propTypes = {
-//   WatchDataData: propTypes.object,
+// Exclusive.propTypes = {
+//   searchText: propTypes.object,
 // };

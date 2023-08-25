@@ -1,54 +1,44 @@
-import { useEffect, useState } from "react";
-import { Layout, theme } from "antd";
-const { Content } = Layout;
-import WatchData from "../../Utils/WatchData.json";
-import "../../Pages/Home/HomeCom.css";
+// import { createContext, useEffect, useState } from "react";
+import { Layout } from "antd";
 
-import HeaderCom from "../../UI/Components/HeaderCom";
-import FooterCom from "../../UI/Components/FooterCom";
-import CardCom from "../../UI/Components/CardCom";
+// import WatchData from "../../Utils/WatchData.json";
+
+import HeaderCom from "../../UI/Components/HeaderCom/HeaderCom";
+import FooterCom from "../../UI/Components/FooterCom/FooterCom";
+// import CardCom from "../../UI/Components/CardCom/CardCom";
 // import HomePage from "../UI/Components/HomePage";
+// import ControlledCarousel from "../../UI/Components/HomePage";
+// import Product from "../Product/Product";
+import CrousalCom from "../../UI/Components/Crousal/CrousalCom";
+import StyleCom1 from "../../UI/Components/Style1/StyleCom1";
+import StyleCom2 from "../../UI/Components/Style2/StyleCom2";
+import BestSellerCom from "../../UI/Components/BestSellerCom/BestSellerCom";
+import DiscoverCom from "../../UI/Components/DiscoverCom/DiscoverCom";
+import ModelCom from "../../UI/Components/ModelCom/ModelCom";
+import GradeCom from "../../UI/Components/Grading/GradeCom";
 import ControlledCarousel from "../../UI/Components/HomePage";
+import { createContext } from "react";
 
-const Homecom = () => {
-  let [productData, setProductData] = useState(WatchData);
-  let [searchText, setSearchText] = useState("");
+export const SearchData = createContext();
 
-  useEffect(() => {
-    console.log("setSearchText", searchText);
-    let filterData = WatchData.filter((e) => {
-      return e?.model?.toLowerCase?.()?.includes?.(searchText?.toLowerCase?.());
-    });
-    console.log("filterData", filterData);
+const { Content } = Layout;
 
-    setProductData(filterData);
-  }, [searchText]);
-
-  // const {
-  //   token: { colorBgContainer },
-  // } = theme.useToken();
-  console.log("productData", productData);
+const HomeCom = () => {
   return (
-    <Layout className="home  ">
-      <HeaderCom setSearchText={setSearchText} />
-      <ControlledCarousel />
+    <Layout className="layout ">
+      <HeaderCom />
       <Content>
-        <div
-          className=" d-flex  flex-wrap"
-          style={{
-            gap: "25px",
-            // background: colorBgContainer,
-            padding: "10px",
-            borderRadius: "20px",
-          }}
-        >
-          {productData?.map?.((e) => {
-            return <CardCom key={e.model} productData={e} />;
-          })}
-        </div>
+        <ControlledCarousel />
+        <CrousalCom />
+        <StyleCom1 />
+        <StyleCom2 />
+        <BestSellerCom />
+        <DiscoverCom />
+        <ModelCom />
+        <GradeCom />
       </Content>
       <FooterCom />
     </Layout>
   );
 };
-export default Homecom;
+export default HomeCom;

@@ -12,9 +12,5 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-    {/* <Head />
-    <NavBar />
-    <Body />
-    <Footer /> */}
   </React.StrictMode>
 );

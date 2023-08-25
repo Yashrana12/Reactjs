@@ -6,6 +6,7 @@ import RadioButtons from "./input/RadioButtons";
 import CheckBox from "./input/CheckBox";
 import ListView from "./Module 9/list_view";
 import IncrementDecrement from "./Module 9/increment&decrement";
+import Contex from "./Hookes/Context/Contex";
 // import Fragment from "./ConditionalRander-Map-Fragmet/Fragment";
 // import ConditionalProject from "./task/ConditionalProject";
 // import MapKeyPro from "./task/MapKeyPro";
@@ -32,59 +33,75 @@ import IncrementDecrement from "./Module 9/increment&decrement";
 // import UseStateFun from "./useState/UseStateFun";
 // import UseStateClass from "./useState/useStateClass";
 // import Project2 from "./useState/project2";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Router from "./Route/Router";
+import Home from "./Route/Home";
+import About from "./Route/About";
+import Service from "./Route/Service";
 
 function App() {
   return (
-    <div>
-      {/* <Head /> */}
-      {/* <NavBar /> */}
-      {/* <Body /> */}
-      {/* <Footer /> */}
-      {/* <UseStateFun /> */}
-      {/* <UseStateClass /> */}
-      {/* <Project1 /> */}
-      {/* <Project2 /> */}
+    <>
+      <BrowserRouter>
+        <Routes>
+          {/* <Head /> */}
+          {/* <NavBar /> */}
+          {/* <Body /> */}
+          {/* <Footer /> */}
+          {/* <UseStateFun /> */}
+          {/* <UseStateClass /> */}
+          {/* <Project1 /> */}
+          {/* <Project2 /> */}
 
-      {/* ------------------props---------------------------- */}
-      {/* <FunProps name={"Yash"} /> */}
-      {/* <FunProps age={26} /> */}
-      {/* <FunProps obj={{ x: 10, y: 20 }} /> */}
-      {/* <FunPropsChange name={"yash"} /> */}
-      {/* <ClassProps name={"Yash"} /> */}
-      {/* <PropsDestructuring name={"Yash"} age={26} /> */}
+          {/* ------------------props---------------------------- */}
+          {/* <FunProps name={"Yash"} /> */}
+          {/* <FunProps age={26} /> */}
+          {/* <FunProps obj={{ x: 10, y: 20 }} /> */}
+          {/* <FunPropsChange name={"yash"} /> */}
+          {/* <ClassProps name={"Yash"} /> */}
+          {/* <PropsDestructuring name={"Yash"} age={26} /> */}
 
-      {/* -------------------- Conditional-rander-------------------- */}
-      {/* <Conditional_rander isMale={false} isYoung={false} /> */}
-      {/* <Conditional_rander isMale={true} isYoung={true} /> */}
+          {/* -------------------- Conditional-rander-------------------- */}
+          {/* <Conditional_rander isMale={false} isYoung={false} /> */}
+          {/* <Conditional_rander isMale={true} isYoung={true} /> */}
 
-      {/* -----------------------map----------------------------- */}
-      {/* <MapKey /> */}
+          {/* -----------------------map----------------------------- */}
+          {/* <MapKey /> */}
 
-      {/* ----------------------Fregment -----------------*/}
-      {/* <Fragment /> */}
+          {/* ----------------------Fregment -----------------*/}
+          {/* <Fragment /> */}
 
-      {/* -------------------task------------------------- */}
-      {/* <ConditionalProject isInput={false} /> */}
-      {/* <MapKeyPro /> */}
-      {/* <ConInputPro isInp={} /> */}
+          {/* -------------------task------------------------- */}
+          {/* <ConditionalProject isInput={false} /> */}
+          {/* <MapKeyPro /> */}
+          {/* <ConInputPro isInp={} /> */}
 
-      {/* ----------------------input -----------------*/}
-      {/* <InputCom /> */}
-      {/* <CarInput /> */}
-      {/* <ColorInput /> */}
-      {/* <DeleteInput /> */}
-      {/* <ChangeUpdate /> */}
-      {/* <TestUpdate /> */}
-      {/* <MultipleInput /> */}
-      {/* <TestMultiInput /> */}
-      {/* <MultiInputForm /> */}
-      {/* <RadioButtons /> */}
-      {/* <CheckBox /> */}
+          {/* ----------------------input -----------------*/}
+          {/* <InputCom /> */}
+          {/* <CarInput /> */}
+          {/* <ColorInput /> */}
+          {/* <DeleteInput /> */}
+          {/* <ChangeUpdate /> */}
+          {/* <TestUpdate /> */}
+          {/* <MultipleInput /> */}
+          {/* <TestMultiInput /> */}
+          {/* <MultiInputForm /> */}
+          {/* <RadioButtons /> */}
+          {/* <CheckBox /> */}
 
-      {/* ----------------------assignment -----------------*/}
-      {/* <ListView /> */}
-      <IncrementDecrement />
-    </div>
+          {/* ----------------------assignment -----------------*/}
+          {/* <ListView /> */}
+          {/* <IncrementDecrement /> */}
+
+          {/* ----------------------Context-----------------*/}
+          {/* <Contex /> */}
+
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -1,0 +1,50 @@
+.home{
+    height: 90vh;
+    width: 100%;
+    background-image: url(../../images/images\ \(2\).jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.innerhome{
+    position: absolute;
+    top: 120px;
+    width: 40%;
+}
+.button{
+    --bg:#0000;
+    --hover-gb:#E58326;
+    --hover-text:#0000;
+    color: white;
+    border: 1px solid var(--bg);  
+    border-radius: 5px;
+    padding: 13px 30px;
+    background-color: var(--bg);
+    transition: 0.4s;  
+}
+.button:hover{
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+}
+.button:active{
+    transform: translate(0);
+    box-shadow: none;
+}
+@media (max-width:576px) {
+    .home .subhome {
+      padding-left: 15px;
+      top: 70px
+    }
+  
+    .home .content {
+      font-size: 40px;
+      width: 80%;
+    }
+  
+    .button {
+      padding: 8px 10px !important;
+    }
+  }

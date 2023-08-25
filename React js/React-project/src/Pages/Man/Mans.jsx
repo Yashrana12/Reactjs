@@ -1,17 +1,26 @@
 import { useEffect, useState } from "react";
-import HeaderCom from "../../UI/Components/HeaderCom";
-import FooterCom from "../../UI/Components/FooterCom";
-import watchData from "../../Utils/WatchData.json";
-import CardCom from "../../UI/Components/CardCom";
+import HeaderCom from "../../UI/Components/HeaderCom/HeaderCom";
+import FooterCom from "../../UI/Components/FooterCom/FooterCom";
+import watchProduct from "../../Utils/WatchData.json";
+import CardCom from "../../UI/Components/CardCom/CardCom";
 // import propTypes from "prop-types";
-import "../../Pages/Home/HomeCom.css";
 
-export default function Man() {
-  const [Data, setData] = useState([]);
+
+export default function Man(props) {
+  const [productData, setProductData] = useState([]);
+
   useEffect(() => {
-    let filterData = watchData?.filter?.((e) => e.categories === "Mans");
-    setData(filterData);
-  }, []);
+    let filterData = watchProduct?.filter?.((e) => {
+      return (
+        e.gender === "Mans" &&
+        e?.model
+          ?.toLowerCase?.()
+          ?.includes(props.searchText?.toLocaleLowerCase?.())
+      );
+    });
+    setProductData(filterData);
+  }, [props.searchText]);
+
   return (
     <>
       <HeaderCom />
@@ -24,14 +33,14 @@ export default function Man() {
           borderRadius: "20px",
         }}
       >
-        {Data?.map?.((e) => {
-          return <CardCom key={e.img} productData={e} />;
+        {productData?.map?.((e) => {
+          return <CardCom key={e.model} productData={e} />;
         })}
       </div>
       <FooterCom />
     </>
   );
 }
-// Womans.propTypes = {
-//   WatchDataData: propTypes.object,
+// Man.propTypes = {
+//   searchText: propTypes.object,
 // };
