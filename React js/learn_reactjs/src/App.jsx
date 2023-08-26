@@ -38,12 +38,13 @@ import Router from "./Route/Router";
 import Home from "./Route/Home";
 import About from "./Route/About";
 import Service from "./Route/Service";
+import ProtectedRoute from "./ProRoute/Router";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
+        <div className="App_div w-100">
           {/* <Head /> */}
           {/* <NavBar /> */}
           {/* <Body /> */}
@@ -96,10 +97,11 @@ function App() {
           {/* ----------------------Context-----------------*/}
           {/* <Contex /> */}
 
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
-        </Routes>
+          <Route path="/service" element={<Service />} /> */}
+          <ProtectedRoute />
+        </div>
       </BrowserRouter>
     </>
   );
